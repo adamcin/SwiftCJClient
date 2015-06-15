@@ -1,6 +1,6 @@
 # SwiftCJClient
 
-[![CI Status](http://img.shields.io/travis/Mark Adamcin/SwiftCJClient.svg?style=flat)](https://travis-ci.org/Mark Adamcin/SwiftCJClient)
+[![CI Status](http://img.shields.io/travis/adamcin/SwiftCJClient.svg?style=flat)](https://travis-ci.org/adamcin/SwiftCJClient)
 [![Version](https://img.shields.io/cocoapods/v/SwiftCJClient.svg?style=flat)](http://cocoapods.org/pods/SwiftCJClient)
 [![License](https://img.shields.io/cocoapods/l/SwiftCJClient.svg?style=flat)](http://cocoapods.org/pods/SwiftCJClient)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftCJClient.svg?style=flat)](http://cocoapods.org/pods/SwiftCJClient)
@@ -22,7 +22,7 @@ pod "SwiftCJClient"
 
 ## Author
 
-Mark Adamcin, mark.adamcin@intel.com
+Mark Adamcin, adamcin@gmail.com
 
 ## License
 
