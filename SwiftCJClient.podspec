@@ -1,30 +1,30 @@
 Pod::Spec.new do |s|
-s.name             = "SwiftCJClient"
-s.version          = "0.1.0"
-s.summary          = "AFNetworking-based Collection+JSON HTTP client."
-s.description      = <<-DESC
-An AFNetworking-based HTTP API client for Collection+JSON using SwiftCJ and BrightFutures
-DESC
-s.homepage         = "https://github.com/adamcin/SwiftCJClient"
-s.license          = 'MIT'
-s.author           = { "Mark Adamcin" => "adamcin@gmail.com" }
-s.source           = { :git => "https://github.com/adamcin/SwiftCJClient.git", :tag => s.version.to_s }
-s.social_media_url = 'https://twitter.com/MarkAdamcin'
+    s.name             = "SwiftCJClient"
+    s.version          = "0.1.0"
+    s.summary          = "AFNetworking-based Collection+JSON HTTP client."
+    s.description      = <<-DESC
+                        An AFNetworking-based HTTP API client for Collection+JSON using SwiftCJ and BrightFutures
+                        DESC
+    s.homepage         = "https://github.com/adamcin/SwiftCJClient"
+    s.license          = 'MIT'
+    s.author           = { "Mark Adamcin" => "adamcin@gmail.com" }
+    s.source           = { :git => "https://github.com/adamcin/SwiftCJClient.git", :tag => s.version.to_s }
+    s.social_media_url = 'https://twitter.com/MarkAdamcin'
 
-s.platform     = :ios, '8.0'
-s.requires_arc = true
+    s.platform     = :ios, '8.0'
+    s.requires_arc = true
 
-s.source_files = 'Pod/Classes/**/*'
-s.resource_bundles = {
-'SwiftCJClient' => ['Pod/Assets/**/*.png']
-}
+    s.source_files = 'Pod/Classes/**/*'
+    s.resource_bundles = {
+        'SwiftCJClient' => ['Pod/Assets/**/*.png']
+    }
 
-s.frameworks = 'Foundation', 'Security'
+    s.frameworks = 'Foundation', 'Security'
 
-s.dependency 'SwiftCJ', '~> 0.1.0'
+    s.dependency 'SwiftCJ', '~> 0.1.0'
 
-s.dependency 'BrightFutures', '~> 2.0.0-beta.1'
+    s.dependency 'BrightFutures', '~> 2.0.0-beta.1'
 
-s.dependency 'AFNetworking', '~> 2.0'
+    s.dependency 'AFNetworking', '~> 2.0'
 
 end
