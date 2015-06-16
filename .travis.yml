@@ -18,5 +18,6 @@ after_success:
   - openssl aes-256-cbc -K $encrypted_567e8491a869_key -iv $encrypted_567e8491a869_iv -in .travis/deploy_key.pem.enc -out .travis/deploy_key.pem -d
   - chmod 600 .travis/deploy_key.pem # this key should have push access
   - ssh-add .travis/deploy_key.pem
+  - ssh-keyscan -t rsa github.com > ~/.ssh/known_hosts
   - pod repo add adamcin-ssh git@github.com:adamcin/CocoaPods-Specs.git
   - pod repo push --verbose adamcin-ssh SwiftCJClient.podspec
