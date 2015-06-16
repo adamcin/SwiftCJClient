@@ -4,6 +4,8 @@
 
 language: objective-c
 osx_image: beta-xcode6.3
+addons:
+  ssh_known_hosts: github.com
 
 cache: cocoapods
 podfile: Example/Podfile

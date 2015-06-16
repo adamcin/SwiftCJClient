@@ -1,7 +1,10 @@
 import Foundation
+import SwiftCJ
 import Security
 import AFNetworking
 import BrightFutures
+
+let SWIFTCJ_SERVICE_ERROR = "CJClient_service_error"
 
 class CJClient {
 
@@ -22,57 +25,57 @@ class CJClient {
         return url
     }
 
-    func get(href: NSURL) -> Future<CJCollection> {
-        let promise = Promise<CJCollection>()
+    func get(href: NSURL) -> Future<CJCollection, NSError> {
+        let promise = Promise<CJCollection, NSError>()
         let task = self.cjMan.GET(toURLString(href), parameters: nil, success: self.successHandler(promise), failure: CJClient.failureHandler(promise))
         task.resume()
         return promise.future
     }
 
-    func delete(href: NSURL) -> Future<Bool> {
-        let promise = Promise<Bool>()
+    func delete(href: NSURL) -> Future<Bool, NSError> {
+        let promise = Promise<Bool, NSError>()
         let task = self.cjMan.DELETE(toURLString(href), parameters: nil, success: CJClient.deleteSuccessHandler(promise), failure: CJClient.failureHandler(promise))
         task.resume()
         return promise.future
     }
 
-    func query(query: CJQuery) -> Future<CJCollection> {
-        let promise = Promise<CJCollection>()
+    func query(query: CJQuery) -> Future<CJCollection, NSError> {
+        let promise = Promise<CJCollection, NSError>()
         let task = self.cjMan.GET(toURLString(query.href), parameters: query.data?.dict, success: self.successHandler(promise), failure: CJClient.failureHandler(promise))
         task.resume()
         return promise.future
     }
 
-    func put(href: NSURL, template: CJTemplate) -> Future<CJCollection> {
-        let promise = Promise<CJCollection>()
+    func put(href: NSURL, template: CJTemplate) -> Future<CJCollection, NSError> {
+        let promise = Promise<CJCollection, NSError>()
         let task = self.cjMan.PUT(toURLString(href), parameters: template, success: self.putSuccessHandler(href, promise: promise), failure: CJClient.failureHandler(promise))
         task.resume()
         return promise.future
     }
 
-    func post(href: NSURL, template: CJTemplate) -> Future<CJCollection> {
-        let promise = Promise<CJCollection>()
+    func post(href: NSURL, template: CJTemplate) -> Future<CJCollection, NSError> {
+        let promise = Promise<CJCollection, NSError>()
         let task = self.cjMan.POST(toURLString(href), parameters: template, success: self.successHandler(promise), failure: CJClient.failureHandler(promise))
         task.resume()
         return promise.future
     }
 
-    func postIntercept(href: NSURL, template: CJTemplate, successInterceptor: SuccessInterceptor) -> Future<CJCollection> {
-        let promise = Promise<CJCollection>()
+    func postIntercept(href: NSURL, template: CJTemplate, successInterceptor: SuccessInterceptor) -> Future<CJCollection,NSError> {
+        let promise = Promise<CJCollection, NSError>()
         let task = self.cjMan.POST(toURLString(href), parameters: template, success: self.successHandler(promise, successInterceptor: successInterceptor), failure: CJClient.failureHandler(promise))
         task.resume()
         return promise.future
     }
 
-    func upload(href: NSURL, data: NSData) -> Future<String?> {
-        let promise = Promise<CJCollection>()
+    func upload(href: NSURL, data: NSData) -> Future<String?, NSError> {
+        let promise = Promise<CJCollection,NSError>()
         let task = self.cjMan.POST(toURLString(href), parameters: CJBlobEntity(data: data, mime: nil), success: self.successHandler(promise), failure: CJClient.failureHandler(promise))
         task.resume()
         return promise.future.map { $0.items.first?.data?.dict["eTag"] as? String }
     }
 
-    func download(href: NSURL) -> Future<NSData> {
-        let promise = Promise<NSData>()
+    func download(href: NSURL) -> Future<NSData, NSError> {
+        let promise = Promise<NSData,NSError>()
         let (urlString, manager) = (href.host != nil && href.host! != self.cjMan.baseURL?.host) ? (href.absoluteString!, self.extMan) : (self.toURLString(href), self.cjMan)
 
         let task = manager.GET(urlString, parameters: nil, success: CJClient.downloadSuccessHandler(promise), failure: CJClient.failureHandler(promise))
@@ -80,11 +83,11 @@ class CJClient {
         return promise.future
     }
 
-    func successHandler(promise: Promise<CJCollection>) -> (task: NSURLSessionDataTask!, entity: AnyObject!) -> Void {
+    func successHandler(promise: Promise<CJCollection, NSError>) -> (task: NSURLSessionDataTask!, entity: AnyObject!) -> Void {
         return successHandler(promise, successInterceptor: nil)
     }
 
-    func successHandler(promise: Promise<CJCollection>, successInterceptor: SuccessInterceptor?) -> (task: NSURLSessionDataTask!, entity: AnyObject!) -> Void {
+    func successHandler(promise: Promise<CJCollection, NSError>, successInterceptor: SuccessInterceptor?) -> (task: NSURLSessionDataTask!, entity: AnyObject!) -> Void {
         return { (task: NSURLSessionDataTask!, entity: AnyObject!) -> Void in
             if let response = task.response as? NSHTTPURLResponse {
                 if let cj = entity as? CJCollection {
@@ -110,7 +113,7 @@ class CJClient {
         }
     }
 
-    func putSuccessHandler(href: NSURL, promise: Promise<CJCollection>) -> (task: NSURLSessionDataTask!, entity: AnyObject!) -> Void {
+    func putSuccessHandler(href: NSURL, promise: Promise<CJCollection, NSError>) -> (task: NSURLSessionDataTask!, entity: AnyObject!) -> Void {
         return { (task: NSURLSessionDataTask!, entity: AnyObject!) -> Void in
             if let response = task.response as? NSHTTPURLResponse {
                 if let cj = entity as? CJCollection {
@@ -128,11 +131,11 @@ class CJClient {
         }
     }
 
-    class func deleteSuccessHandler(promise: Promise<Bool>) -> (task: NSURLSessionDataTask!, entity: AnyObject!) -> Void {
+    class func deleteSuccessHandler(promise: Promise<Bool, NSError>) -> (task: NSURLSessionDataTask!, entity: AnyObject!) -> Void {
         return { (task: NSURLSessionDataTask!, entity: AnyObject!) -> Void in
             if let response = task.response as? NSHTTPURLResponse {
                 if let error = (entity as? CJCollection)?.error {
-                    promise.failure(toNSError(error, httpCode: response.statusCode))
+                    promise.failure(CJClient.toNSError(error, httpCode: response.statusCode))
                 } else {
                     promise.success(response.statusCode == 204)
                 }
@@ -142,7 +145,7 @@ class CJClient {
         }
     }
 
-    class func downloadSuccessHandler(promise: Promise<NSData>) -> (task: NSURLSessionDataTask!, entity: AnyObject!) -> Void {
+    class func downloadSuccessHandler(promise: Promise<NSData, NSError>) -> (task: NSURLSessionDataTask!, entity: AnyObject!) -> Void {
         return { (task: NSURLSessionDataTask!, entity: AnyObject!) -> Void in
 
             if let response = task.response as? NSHTTPURLResponse {
@@ -153,10 +156,13 @@ class CJClient {
         }
     }
 
-
-    class func failureHandler<U>(promise: Promise<U>) -> (task: NSURLSessionDataTask!, error: NSError!) -> Void {
+    class func failureHandler<U>(promise: Promise<U,NSError>) -> (task: NSURLSessionDataTask!, error: NSError!) -> Void {
         return { (task: NSURLSessionDataTask!, error: NSError!) -> Void in
             promise.failure(error)
         }
+    }
+    
+    class func toNSError(error: CJError, httpCode: Int = -1) -> NSError {
+        return NSError(domain: SWIFTCJ_SERVICE_ERROR, code: error.code?.toInt() ?? -1, userInfo: ["title": error.title ?? "", "message": error.message ?? "", "status": httpCode, "code": error.code ?? ""])
     }
 }

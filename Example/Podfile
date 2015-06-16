@@ -3,7 +3,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks!
 
-
 target 'SwiftCJClient_Tests', :exclusive => true do
   pod "SwiftCJClient", :path => "../"
 

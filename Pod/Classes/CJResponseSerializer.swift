@@ -1,5 +1,6 @@
 import Foundation
 import AFNetworking
+import SwiftCJ
 
 var CJResponseSerializer_instance: CJResponseSerializer?
 
