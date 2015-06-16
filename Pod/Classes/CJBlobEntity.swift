@@ -1,10 +1,10 @@
 import Foundation
 
-class CJBlobEntity {
-    let data: NSData
-    let mime: String
+public class CJBlobEntity {
+    public let data: NSData
+    public let mime: String
     
-    init(data: NSData, mime: String?) {
+    public init(data: NSData, mime: String?) {
         self.data = data
         self.mime = mime ?? "application/octet-stream"
     }

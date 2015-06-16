@@ -5,10 +5,10 @@ import SwiftCJ
 var CJRequestSerializer_instance: CJRequestSerializer?
 
 @objc
-class CJRequestSerializer : AFHTTPRequestSerializer {
+public class CJRequestSerializer : AFHTTPRequestSerializer {
     
     
-    override func requestBySerializingRequest(request: NSURLRequest!, withParameters parameters: AnyObject!, error: NSErrorPointer) -> NSURLRequest! {
+    override public func requestBySerializingRequest(request: NSURLRequest!, withParameters parameters: AnyObject!, error: NSErrorPointer) -> NSURLRequest! {
         //NSParameterAssert(request)
 
         if self.HTTPMethodsEncodingParametersInURI.contains(request.HTTPMethod!.uppercaseString) {
@@ -51,7 +51,7 @@ class CJRequestSerializer : AFHTTPRequestSerializer {
         return mRequest
     }
 
-    class func instance() -> CJRequestSerializer {
+    public class func instance() -> CJRequestSerializer {
         if CJRequestSerializer_instance == nil {
             CJRequestSerializer_instance = CJRequestSerializer() as CJRequestSerializer
         }

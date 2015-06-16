@@ -5,8 +5,8 @@ import SwiftCJ
 var CJResponseSerializer_instance: CJResponseSerializer?
 
 @objc
-class CJResponseSerializer: AFHTTPResponseSerializer {
-    let MIME_CJ = "application/vnd.collection+json"
+public class CJResponseSerializer: AFHTTPResponseSerializer {
+    public let MIME_CJ = "application/vnd.collection+json"
     override init() {
         super.init()
         if let accTypes = self.acceptableContentTypes {
@@ -16,7 +16,7 @@ class CJResponseSerializer: AFHTTPResponseSerializer {
         }
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         if let accTypes = self.acceptableContentTypes {
             self.acceptableContentTypes.insert(MIME_CJ)
@@ -25,7 +25,7 @@ class CJResponseSerializer: AFHTTPResponseSerializer {
         }
     }
     
-    override func responseObjectForResponse(response: NSURLResponse!, data: NSData!, error: NSErrorPointer) -> AnyObject! {
+    override public func responseObjectForResponse(response: NSURLResponse!, data: NSData!, error: NSErrorPointer) -> AnyObject! {
         println("responseObjectForResponse response: \((response as! NSHTTPURLResponse).statusCode)")
         var stringEncoding = self.stringEncoding
         
@@ -62,9 +62,8 @@ class CJResponseSerializer: AFHTTPResponseSerializer {
                 if let json = jsonObj as? [NSObject: AnyObject] {
                     var writingError: NSErrorPointer = nil
                     if let dataString = NSJSONSerialization.dataWithJSONObject(json, options: NSJSONWritingOptions.PrettyPrinted, error: writingError) {
-                        println("-- json: \(NSString(data: dataString, encoding: NSUTF8StringEncoding))")
+                        //println("-- json: \(NSString(data: dataString, encoding: NSUTF8StringEncoding))")
                     }
-                    
                     
                     cj = CJCollection.collectionForDictionary(json)
                 }
@@ -76,7 +75,7 @@ class CJResponseSerializer: AFHTTPResponseSerializer {
         return nil
     }
 
-    class func instance() -> CJResponseSerializer {
+    public class func instance() -> CJResponseSerializer {
         if CJResponseSerializer_instance == nil {
             CJResponseSerializer_instance = CJResponseSerializer() as CJResponseSerializer
         }
