@@ -10,7 +10,7 @@ addons:
 before_install:
   - gem install cocoapods -v '0.37.2' # Since Travis is not always on latest version
   - brew install carthage
-  - carthage bootstrap --verbose
+  - CODE_SIGNING_REQUIRED=NO carthage bootstrap
 script:
   - xctool clean build test -workspace SwiftCJClient.xcworkspace -scheme SwiftCJClient-iOS -destination 'platform=iOS Simulator,name=iPhone 6' -sdk iphonesimulator
   - xctool clean build test -workspace SwiftCJClient.xcworkspace -scheme SwiftCJClient-Mac
