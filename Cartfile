@@ -1,0 +1,4 @@
+github "adamcin/SwiftCJ" "0.1.0"
+github "Alamofire/Alamofire" >= 1.2
+github "automatic/AFNetworking" "carthage-support"
+github "Thomvis/BrightFutures" "2.0-development"

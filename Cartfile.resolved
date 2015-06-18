@@ -1,0 +1,6 @@
+github "automatic/AFNetworking" "877a16dd2ce6a73f425d576ca569ba319131b842"
+github "Alamofire/Alamofire" "1.2.3"
+github "robrix/Box" "1.2.2"
+github "adamcin/SwiftCJ" "112968baea4b037a5997003142bc4996540f2f32"
+github "antitypical/Result" "0.4.4"
+github "Thomvis/BrightFutures" "64a8e7827bdad45f84f7aede88aff4f6f6f019ec"

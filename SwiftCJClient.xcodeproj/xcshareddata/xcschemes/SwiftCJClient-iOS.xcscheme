@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "SwiftCJClient_Example.app"
-               BlueprintName = "SwiftCJClient_Example"
+               BlueprintIdentifier = "AEF0594E1B32093300B7CFEB"
+               BuildableName = "SwiftCJClient.framework"
+               BlueprintName = "SwiftCJClient-iOS"
                ReferencedContainer = "container:SwiftCJClient.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "SwiftCJClient_Tests.xctest"
-               BlueprintName = "SwiftCJClient_Tests"
+               BlueprintIdentifier = "AEF059591B32093300B7CFEB"
+               BuildableName = "SwiftCJClient-iOSTests.xctest"
+               BlueprintName = "SwiftCJClient-iOSTests"
                ReferencedContainer = "container:SwiftCJClient.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "SwiftCJClient_Tests.xctest"
-               BlueprintName = "SwiftCJClient_Tests"
+               BlueprintIdentifier = "AEF059591B32093300B7CFEB"
+               BuildableName = "SwiftCJClient-iOSTests.xctest"
+               BlueprintName = "SwiftCJClient-iOSTests"
                ReferencedContainer = "container:SwiftCJClient.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +56,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SwiftCJClient_Example.app"
-            BlueprintName = "SwiftCJClient_Example"
+            BlueprintIdentifier = "AEF0594E1B32093300B7CFEB"
+            BuildableName = "SwiftCJClient.framework"
+            BlueprintName = "SwiftCJClient-iOS"
             ReferencedContainer = "container:SwiftCJClient.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -72,16 +72,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SwiftCJClient_Example.app"
-            BlueprintName = "SwiftCJClient_Example"
+            BlueprintIdentifier = "AEF0594E1B32093300B7CFEB"
+            BuildableName = "SwiftCJClient.framework"
+            BlueprintName = "SwiftCJClient-iOS"
             ReferencedContainer = "container:SwiftCJClient.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -91,16 +90,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SwiftCJClient_Example.app"
-            BlueprintName = "SwiftCJClient_Example"
+            BlueprintIdentifier = "AEF0594E1B32093300B7CFEB"
+            BuildableName = "SwiftCJClient.framework"
+            BlueprintName = "SwiftCJClient-iOS"
             ReferencedContainer = "container:SwiftCJClient.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

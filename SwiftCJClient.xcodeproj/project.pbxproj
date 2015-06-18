@@ -1,0 +1,777 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AEF0595B1B32093300B7CFEB /* SwiftCJClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF0594F1B32093300B7CFEB /* SwiftCJClient.framework */; };
+		AEF059621B32093300B7CFEB /* SwiftCJClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF059611B32093300B7CFEB /* SwiftCJClientTests.swift */; };
+		AEF059921B3331A600B7CFEB /* CJBlobEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF0598E1B3331A600B7CFEB /* CJBlobEntity.swift */; };
+		AEF059931B3331A600B7CFEB /* CJClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF0598F1B3331A600B7CFEB /* CJClient.swift */; };
+		AEF059941B3331A600B7CFEB /* CJRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF059901B3331A600B7CFEB /* CJRequestSerializer.swift */; };
+		AEF059951B3331A600B7CFEB /* CJResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF059911B3331A600B7CFEB /* CJResponseSerializer.swift */; };
+		AEF0599A1B33334E00B7CFEB /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059961B33334E00B7CFEB /* AFNetworking.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF0599B1B33334E00B7CFEB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059971B33334E00B7CFEB /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF0599C1B33334E00B7CFEB /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059981B33334E00B7CFEB /* BrightFutures.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF0599D1B33334E00B7CFEB /* SwiftCJ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059991B33334E00B7CFEB /* SwiftCJ.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF0599E1B33336800B7CFEB /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059961B33334E00B7CFEB /* AFNetworking.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF0599F1B33336800B7CFEB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059971B33334E00B7CFEB /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF059A01B33336800B7CFEB /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059981B33334E00B7CFEB /* BrightFutures.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF059A11B33336800B7CFEB /* SwiftCJ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059991B33334E00B7CFEB /* SwiftCJ.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF059B21B33344900B7CFEB /* SwiftCJClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059A71B33344800B7CFEB /* SwiftCJClient.framework */; };
+		AEF059EE1B33414000B7CFEB /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059EA1B33414000B7CFEB /* AFNetworking.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF059EF1B33414000B7CFEB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059EB1B33414000B7CFEB /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF059F01B33414000B7CFEB /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059EC1B33414000B7CFEB /* BrightFutures.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF059F11B33414000B7CFEB /* SwiftCJ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059ED1B33414000B7CFEB /* SwiftCJ.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF059F21B33414800B7CFEB /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059EA1B33414000B7CFEB /* AFNetworking.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF059F31B33414800B7CFEB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059EB1B33414000B7CFEB /* Alamofire.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF059F41B33414800B7CFEB /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059EC1B33414000B7CFEB /* BrightFutures.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF059F51B33414800B7CFEB /* SwiftCJ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059ED1B33414000B7CFEB /* SwiftCJ.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF059F81B33432C00B7CFEB /* CJBlobEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF0598E1B3331A600B7CFEB /* CJBlobEntity.swift */; };
+		AEF059F91B33432C00B7CFEB /* CJClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF0598F1B3331A600B7CFEB /* CJClient.swift */; };
+		AEF059FA1B33432C00B7CFEB /* CJRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF059901B3331A600B7CFEB /* CJRequestSerializer.swift */; };
+		AEF059FB1B33432C00B7CFEB /* CJResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF059911B3331A600B7CFEB /* CJResponseSerializer.swift */; };
+		AEF059FC1B33433100B7CFEB /* SwiftCJClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF059611B32093300B7CFEB /* SwiftCJClientTests.swift */; };
+		AEF05A001B33440800B7CFEB /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059FE1B33440800B7CFEB /* Box.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF05A011B33440800B7CFEB /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059FF1B33440800B7CFEB /* Result.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF05A041B33454C00B7CFEB /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF05A021B33454C00B7CFEB /* Box.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF05A051B33454C00B7CFEB /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF05A031B33454C00B7CFEB /* Result.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF05A061B33457300B7CFEB /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF05A021B33454C00B7CFEB /* Box.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF05A071B33457300B7CFEB /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF05A031B33454C00B7CFEB /* Result.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF05A081B33457C00B7CFEB /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059FE1B33440800B7CFEB /* Box.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AEF05A091B33457C00B7CFEB /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF059FF1B33440800B7CFEB /* Result.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AEF0595C1B32093300B7CFEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEF059461B32093300B7CFEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEF0594E1B32093300B7CFEB;
+			remoteInfo = SwiftCJClient;
+		};
+		AEF059B31B33344900B7CFEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEF059461B32093300B7CFEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEF059A61B33344800B7CFEB;
+			remoteInfo = "SwiftCJClient-Mac";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AEF0594F1B32093300B7CFEB /* SwiftCJClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftCJClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEF059531B32093300B7CFEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEF0595A1B32093300B7CFEB /* SwiftCJClient-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftCJClient-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEF059601B32093300B7CFEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEF059611B32093300B7CFEB /* SwiftCJClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCJClientTests.swift; sourceTree = "<group>"; };
+		AEF0598E1B3331A600B7CFEB /* CJBlobEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJBlobEntity.swift; sourceTree = "<group>"; };
+		AEF0598F1B3331A600B7CFEB /* CJClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJClient.swift; sourceTree = "<group>"; };
+		AEF059901B3331A600B7CFEB /* CJRequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJRequestSerializer.swift; sourceTree = "<group>"; };
+		AEF059911B3331A600B7CFEB /* CJResponseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJResponseSerializer.swift; sourceTree = "<group>"; };
+		AEF059961B33334E00B7CFEB /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
+		AEF059971B33334E00B7CFEB /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		AEF059981B33334E00B7CFEB /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
+		AEF059991B33334E00B7CFEB /* SwiftCJ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCJ.framework; path = Carthage/Build/iOS/SwiftCJ.framework; sourceTree = "<group>"; };
+		AEF059A71B33344800B7CFEB /* SwiftCJClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftCJClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEF059B11B33344800B7CFEB /* SwiftCJClient-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftCJClient-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEF059EA1B33414000B7CFEB /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/Mac/AFNetworking.framework; sourceTree = "<group>"; };
+		AEF059EB1B33414000B7CFEB /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		AEF059EC1B33414000B7CFEB /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/Mac/BrightFutures.framework; sourceTree = "<group>"; };
+		AEF059ED1B33414000B7CFEB /* SwiftCJ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCJ.framework; path = Carthage/Build/Mac/SwiftCJ.framework; sourceTree = "<group>"; };
+		AEF059FE1B33440800B7CFEB /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
+		AEF059FF1B33440800B7CFEB /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		AEF05A021B33454C00B7CFEB /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/Mac/Box.framework; sourceTree = "<group>"; };
+		AEF05A031B33454C00B7CFEB /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEF0594B1B32093300B7CFEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF0599A1B33334E00B7CFEB /* AFNetworking.framework in Frameworks */,
+				AEF0599B1B33334E00B7CFEB /* Alamofire.framework in Frameworks */,
+				AEF0599C1B33334E00B7CFEB /* BrightFutures.framework in Frameworks */,
+				AEF05A001B33440800B7CFEB /* Box.framework in Frameworks */,
+				AEF05A011B33440800B7CFEB /* Result.framework in Frameworks */,
+				AEF0599D1B33334E00B7CFEB /* SwiftCJ.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF059571B32093300B7CFEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF0599E1B33336800B7CFEB /* AFNetworking.framework in Frameworks */,
+				AEF05A091B33457C00B7CFEB /* Result.framework in Frameworks */,
+				AEF0599F1B33336800B7CFEB /* Alamofire.framework in Frameworks */,
+				AEF059A01B33336800B7CFEB /* BrightFutures.framework in Frameworks */,
+				AEF059A11B33336800B7CFEB /* SwiftCJ.framework in Frameworks */,
+				AEF05A081B33457C00B7CFEB /* Box.framework in Frameworks */,
+				AEF0595B1B32093300B7CFEB /* SwiftCJClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF059A31B33344800B7CFEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF059EE1B33414000B7CFEB /* AFNetworking.framework in Frameworks */,
+				AEF059EF1B33414000B7CFEB /* Alamofire.framework in Frameworks */,
+				AEF059F01B33414000B7CFEB /* BrightFutures.framework in Frameworks */,
+				AEF05A041B33454C00B7CFEB /* Box.framework in Frameworks */,
+				AEF05A051B33454C00B7CFEB /* Result.framework in Frameworks */,
+				AEF059F11B33414000B7CFEB /* SwiftCJ.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF059AE1B33344800B7CFEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF059F21B33414800B7CFEB /* AFNetworking.framework in Frameworks */,
+				AEF05A071B33457300B7CFEB /* Result.framework in Frameworks */,
+				AEF059F31B33414800B7CFEB /* Alamofire.framework in Frameworks */,
+				AEF059F41B33414800B7CFEB /* BrightFutures.framework in Frameworks */,
+				AEF059F51B33414800B7CFEB /* SwiftCJ.framework in Frameworks */,
+				AEF05A061B33457300B7CFEB /* Box.framework in Frameworks */,
+				AEF059B21B33344900B7CFEB /* SwiftCJClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AEF059451B32093300B7CFEB = {
+			isa = PBXGroup;
+			children = (
+				AEF059F71B3342B600B7CFEB /* Carthage-iOS */,
+				AEF059F61B33428F00B7CFEB /* Carthage-Mac */,
+				AEF059511B32093300B7CFEB /* SwiftCJClient */,
+				AEF0595E1B32093300B7CFEB /* SwiftCJClientTests */,
+				AEF059501B32093300B7CFEB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AEF059501B32093300B7CFEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEF0594F1B32093300B7CFEB /* SwiftCJClient.framework */,
+				AEF0595A1B32093300B7CFEB /* SwiftCJClient-iOSTests.xctest */,
+				AEF059A71B33344800B7CFEB /* SwiftCJClient.framework */,
+				AEF059B11B33344800B7CFEB /* SwiftCJClient-MacTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEF059511B32093300B7CFEB /* SwiftCJClient */ = {
+			isa = PBXGroup;
+			children = (
+				AEF0598E1B3331A600B7CFEB /* CJBlobEntity.swift */,
+				AEF0598F1B3331A600B7CFEB /* CJClient.swift */,
+				AEF059901B3331A600B7CFEB /* CJRequestSerializer.swift */,
+				AEF059911B3331A600B7CFEB /* CJResponseSerializer.swift */,
+				AEF059521B32093300B7CFEB /* Supporting Files */,
+			);
+			path = SwiftCJClient;
+			sourceTree = "<group>";
+		};
+		AEF059521B32093300B7CFEB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEF059531B32093300B7CFEB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEF0595E1B32093300B7CFEB /* SwiftCJClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				AEF059611B32093300B7CFEB /* SwiftCJClientTests.swift */,
+				AEF0595F1B32093300B7CFEB /* Supporting Files */,
+			);
+			path = SwiftCJClientTests;
+			sourceTree = "<group>";
+		};
+		AEF0595F1B32093300B7CFEB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEF059601B32093300B7CFEB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEF059F61B33428F00B7CFEB /* Carthage-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				AEF05A021B33454C00B7CFEB /* Box.framework */,
+				AEF05A031B33454C00B7CFEB /* Result.framework */,
+				AEF059EA1B33414000B7CFEB /* AFNetworking.framework */,
+				AEF059EB1B33414000B7CFEB /* Alamofire.framework */,
+				AEF059EC1B33414000B7CFEB /* BrightFutures.framework */,
+				AEF059ED1B33414000B7CFEB /* SwiftCJ.framework */,
+			);
+			name = "Carthage-Mac";
+			sourceTree = "<group>";
+		};
+		AEF059F71B3342B600B7CFEB /* Carthage-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				AEF059FE1B33440800B7CFEB /* Box.framework */,
+				AEF059FF1B33440800B7CFEB /* Result.framework */,
+				AEF059961B33334E00B7CFEB /* AFNetworking.framework */,
+				AEF059971B33334E00B7CFEB /* Alamofire.framework */,
+				AEF059981B33334E00B7CFEB /* BrightFutures.framework */,
+				AEF059991B33334E00B7CFEB /* SwiftCJ.framework */,
+			);
+			name = "Carthage-iOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AEF0594C1B32093300B7CFEB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF059A41B33344800B7CFEB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AEF0594E1B32093300B7CFEB /* SwiftCJClient-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEF059651B32093300B7CFEB /* Build configuration list for PBXNativeTarget "SwiftCJClient-iOS" */;
+			buildPhases = (
+				AEF0594A1B32093300B7CFEB /* Sources */,
+				AEF0594B1B32093300B7CFEB /* Frameworks */,
+				AEF0594C1B32093300B7CFEB /* Headers */,
+				AEF0594D1B32093300B7CFEB /* Resources */,
+				AEF059FD1B3343B500B7CFEB /* Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftCJClient-iOS";
+			productName = SwiftCJClient;
+			productReference = AEF0594F1B32093300B7CFEB /* SwiftCJClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AEF059591B32093300B7CFEB /* SwiftCJClient-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEF059681B32093300B7CFEB /* Build configuration list for PBXNativeTarget "SwiftCJClient-iOSTests" */;
+			buildPhases = (
+				AEF059561B32093300B7CFEB /* Sources */,
+				AEF059571B32093300B7CFEB /* Frameworks */,
+				AEF059581B32093300B7CFEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEF0595D1B32093300B7CFEB /* PBXTargetDependency */,
+			);
+			name = "SwiftCJClient-iOSTests";
+			productName = SwiftCJClientTests;
+			productReference = AEF0595A1B32093300B7CFEB /* SwiftCJClient-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AEF059A61B33344800B7CFEB /* SwiftCJClient-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEF059BA1B33344900B7CFEB /* Build configuration list for PBXNativeTarget "SwiftCJClient-Mac" */;
+			buildPhases = (
+				AEF059A21B33344800B7CFEB /* Sources */,
+				AEF059A31B33344800B7CFEB /* Frameworks */,
+				AEF059A41B33344800B7CFEB /* Headers */,
+				AEF059A51B33344800B7CFEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftCJClient-Mac";
+			productName = "SwiftCJClient-Mac";
+			productReference = AEF059A71B33344800B7CFEB /* SwiftCJClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AEF059B01B33344800B7CFEB /* SwiftCJClient-MacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEF059BD1B33344900B7CFEB /* Build configuration list for PBXNativeTarget "SwiftCJClient-MacTests" */;
+			buildPhases = (
+				AEF059AD1B33344800B7CFEB /* Sources */,
+				AEF059AE1B33344800B7CFEB /* Frameworks */,
+				AEF059AF1B33344800B7CFEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEF059B41B33344900B7CFEB /* PBXTargetDependency */,
+			);
+			name = "SwiftCJClient-MacTests";
+			productName = "SwiftCJClient-MacTests";
+			productReference = AEF059B11B33344800B7CFEB /* SwiftCJClient-MacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEF059461B32093300B7CFEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Mark Adamcin";
+				TargetAttributes = {
+					AEF0594E1B32093300B7CFEB = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					AEF059591B32093300B7CFEB = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					AEF059A61B33344800B7CFEB = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					AEF059B01B33344800B7CFEB = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = AEF059491B32093300B7CFEB /* Build configuration list for PBXProject "SwiftCJClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AEF059451B32093300B7CFEB;
+			productRefGroup = AEF059501B32093300B7CFEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEF0594E1B32093300B7CFEB /* SwiftCJClient-iOS */,
+				AEF059591B32093300B7CFEB /* SwiftCJClient-iOSTests */,
+				AEF059A61B33344800B7CFEB /* SwiftCJClient-Mac */,
+				AEF059B01B33344800B7CFEB /* SwiftCJClient-MacTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEF0594D1B32093300B7CFEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF059581B32093300B7CFEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF059A51B33344800B7CFEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF059AF1B33344800B7CFEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AEF059FD1B3343B500B7CFEB /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/AFNetworking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/BrightFutures.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Box.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftCJ.framework",
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEF0594A1B32093300B7CFEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF059921B3331A600B7CFEB /* CJBlobEntity.swift in Sources */,
+				AEF059931B3331A600B7CFEB /* CJClient.swift in Sources */,
+				AEF059941B3331A600B7CFEB /* CJRequestSerializer.swift in Sources */,
+				AEF059951B3331A600B7CFEB /* CJResponseSerializer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF059561B32093300B7CFEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF059621B32093300B7CFEB /* SwiftCJClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF059A21B33344800B7CFEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF059F81B33432C00B7CFEB /* CJBlobEntity.swift in Sources */,
+				AEF059F91B33432C00B7CFEB /* CJClient.swift in Sources */,
+				AEF059FA1B33432C00B7CFEB /* CJRequestSerializer.swift in Sources */,
+				AEF059FB1B33432C00B7CFEB /* CJResponseSerializer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF059AD1B33344800B7CFEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF059FC1B33433100B7CFEB /* SwiftCJClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEF0595D1B32093300B7CFEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEF0594E1B32093300B7CFEB /* SwiftCJClient-iOS */;
+			targetProxy = AEF0595C1B32093300B7CFEB /* PBXContainerItemProxy */;
+		};
+		AEF059B41B33344900B7CFEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEF059A61B33344800B7CFEB /* SwiftCJClient-Mac */;
+			targetProxy = AEF059B31B33344900B7CFEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AEF059631B32093300B7CFEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AEF059641B32093300B7CFEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AEF059661B32093300B7CFEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SwiftCJClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = SwiftCJClient;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AEF059671B32093300B7CFEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SwiftCJClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = SwiftCJClient;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AEF059691B32093300B7CFEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftCJClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AEF0596A1B32093300B7CFEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SwiftCJClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AEF059BB1B33344900B7CFEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftCJClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = SwiftCJClient;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AEF059BC1B33344900B7CFEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SwiftCJClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = SwiftCJClient;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AEF059BE1B33344900B7CFEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftCJClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		AEF059BF1B33344900B7CFEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = SwiftCJClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEF059491B32093300B7CFEB /* Build configuration list for PBXProject "SwiftCJClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEF059631B32093300B7CFEB /* Debug */,
+				AEF059641B32093300B7CFEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEF059651B32093300B7CFEB /* Build configuration list for PBXNativeTarget "SwiftCJClient-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEF059661B32093300B7CFEB /* Debug */,
+				AEF059671B32093300B7CFEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEF059681B32093300B7CFEB /* Build configuration list for PBXNativeTarget "SwiftCJClient-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEF059691B32093300B7CFEB /* Debug */,
+				AEF0596A1B32093300B7CFEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEF059BA1B33344900B7CFEB /* Build configuration list for PBXNativeTarget "SwiftCJClient-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEF059BB1B33344900B7CFEB /* Debug */,
+				AEF059BC1B33344900B7CFEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AEF059BD1B33344900B7CFEB /* Build configuration list for PBXNativeTarget "SwiftCJClient-MacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEF059BE1B33344900B7CFEB /* Debug */,
+				AEF059BF1B33344900B7CFEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEF059461B32093300B7CFEB /* Project object */;
+}
